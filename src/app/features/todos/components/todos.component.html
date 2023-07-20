@@ -1,0 +1,13 @@
+<main class="container d-flex align-items-center justify-content-center">
+  <div *ngIf="todos.length">
+    <h2>Todos</h2>
+    <ul>
+      <li *ngFor="let todo of todos">
+        <span>{{todo.title}}</span>
+        <span *ngIf="todo.completed"> - Completed</span>
+        <span *ngIf="!todo.completed"> - Not completed</span>
+      </li>
+    </ul>
+  </div>
+  <p *ngIf="!todos.length">No todos available</p>
+</main>

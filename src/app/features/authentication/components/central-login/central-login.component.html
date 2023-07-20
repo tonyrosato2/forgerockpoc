@@ -1,0 +1,18 @@
+<main class="container d-flex align-items-center justify-content-center">
+  <ng-container *ngIf="userService.isAuthenticated">
+    <div class="text-center">
+      <p class="fw-bold fs-6 mb-0 text-dark">
+        Welcome, {{ userService.info.name }}! You are logged in.
+      </p>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!userService.isAuthenticated">
+    <div class="text-center">
+      <p class="fw-bold fs-6 mb-0 text-dark">
+        Please log in to access the content.
+      </p>
+    </div>
+  </ng-container>
+</main>
+
+
